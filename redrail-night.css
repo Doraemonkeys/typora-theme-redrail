@@ -279,6 +279,7 @@ h3 {
     color: var(--mid-1);
 }
 
+
 h4 {
     margin-top: 0.5em;
     font-size: 1.2em;
@@ -419,10 +420,22 @@ h6 p {
 }
 
 blockquote {
-    border-left: 4px solid rgb(239, 112, 96);
-    padding: 10px 15px;
-    color: #fffefe;
-    background-color: #4c4141;
+    padding: 0.5rem 1rem;
+    border-left: 8px solid #2f845e;
+    background-color: #222526;
+    border-radius: 4px;
+}
+
+blockquote:before {
+    content: "";
+    width: 11.2px;
+    height: 8.4px;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAARCAYAAADHeGwwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFBSURBVHgB7ZQ/UoNAFMa/t6BhYiF2ig2d2HGE5AYeIZwgeoLEk2S8QTxBcgNbxopGTReqmCjsk2UmCMifJDPOWPgVDLvzvd/7WN4s8Mui8gbbpgmjO2SGS5uVR0EYtkE+nfMemG4E0anmv3q1Dfj6YihBYzBMtZaQ/SN/Ma8Dp2E6JyNJfLvdSxoUmHpmdqyRZIyxh7jTnTGx2+QR6hE5lwOJHJwQJuv7xvRJICbk4BwIyEHZl35OfGU9ITMrI/fJXwS1cNs2pfGxzCCEKb1X/y+hzMglkWCvCZ4GOt70CilZ3tUNg4iMdeEMm47lu0qY21cGz5sC6eWN2LEmP3igBPLyUAUgJreqhiU/6s9vU1IzLCBmaFF+ZNVQEHjSViPWqzOBHUXQbOypyDDcnRscqv8Gf6ABx1rrdaykiWiJA/QFHEl+W66g4YEAAAAASUVORK5CYII=") no-repeat;
+    display: block;
+    background-size: contain;
+    line-height: 160%;
+    margin-left: 4px;
+    margin-bottom: 7.2px
 }
 
 table {
@@ -513,7 +526,7 @@ table tr td:last-child {
     CodeMirror template by Jan T. Sott (https://github.com/idleberg/base16-codemirror)
     Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16)
 */
-.cm-s-inner.CodeMirror {background: #2b2b2b; color: #cdcbcb;}
+.cm-s-inner.CodeMirror {background: #222526; color: #cdcbcb;}
 .cm-s-inner div.CodeMirror-selected {background: #272935 !important;}
 .cm-s-inner .CodeMirror-gutters {background: #2b2b2b; border-right: 0px;}
 .cm-s-inner .CodeMirror-linenumber {color: #7a87a8;}
@@ -545,33 +558,38 @@ table tr td:last-child {
 .cm-s-inner .CodeMirror-activeline-background { background: #303040; }
 
 #write .md-fences {
-    border: 1px solid #7a7a7a;
-    -webkit-font-smoothing: initial;
-    margin: 0.5rem 0 !important;
-    /* padding: 0.3rem 0 !important; */
-    padding: 3px 0px;
-    line-height: 1.55rem;
-    border-radius: 2px;
-    /*font-family: 'Roboto Mono', 'Source Sans Pro', 'Microsoft YaHei', '微软雅黑' !important;*/
-    /*font-family: 'Roboto Mono', 'Source Sans Pro', 'Microsoft YaHei', '微软雅黑';*/
-    /*font-family: Consolas, 'Source Han SerifCN', Georgia, Times, 'SimSun' !important;*/
-    font-family: 'Menlo';
-    /*font-size: 0.9rem;*/
-    font-size: 17px;
-    font-weight: normal;
-    word-wrap: normal;
+    font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #222526;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin-bottom: 2.5rem;
+    border: none;
+    border-radius: 6px;
 }
 
 /**apply to code fences with plan text**/
 /* fences就是代码块的基本样式*/
-.md-fences {
-    background-color: #263238;
-    color: rgba(233, 237, 237, 1);
-    border: none;
+.md-fences[contenteditable="false"]:active, .md-fences[contenteditable="false"]:focus {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-/* tooltip就是点击代码块之后，在右下角有一个小框（tooltip）提示这是什么语言*/
+  
 .md-fences .code-tooltip {
-    background-color: #263238;
+    background-color: #222526;
+    border-radius: 4px;
+}
+
+.md-fences span {
+    color: #abb2bf;
+}
+
+.md-fences .code-tooltip .ty-input {
+    color: #fff;
+    font-weight: 500;
 }
 
 /*代码块里面的长虚线颜色*/
@@ -894,5 +912,3 @@ footer {
         word-wrap: break-word;
     }
 }
-
-
