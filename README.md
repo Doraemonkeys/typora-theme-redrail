@@ -1,73 +1,84 @@
 # typora-theme-redrail
-This is a typora theme inspired by [pie](https://github.com/shrugginG/typora-theme-pie) and [ursine](https://github.com/danielduyixin/typora-theme-ursine) theme.
+> 一个`typora`主题，具有[pie](https://github.com/shrugginG/typora-theme-pie)和[ursine](https://github.com/danielduyixin/typora-theme-ursine)的风格。
 
-English | [简体中文](./README_CN.md)
-## Origin
-The 'RedRail' theme inspired by the theme of the Minority Style，which perform well in the `pie` and `ursine` themes. Among the various Typora themes, the Minority Style uses a striking and refreshing red color as its base tone, which makes coding and note-taking more enjoyable and relaxed. Also, use light themes during the day to make your notes clear, and dark themes at night to make your notes comfortable. Here are a few sources of inspiration, thank you in advance.
-- [pie](https://github.com/shrugginG/typora-theme-pie) theme
-- [ursine](https://github.com/danielduyixin/typora-theme-ursine) theme
-- Zhang Jin's modifications of the `pie` theme and `ursine` theme
+[English](./README.md) | 简体中文
+## 主题的由来
+`redrail`主题来源于少数派风格的主题，在各种typora主题中，少数派风格以令人醒目清爽的红色作为基调，能在代码和笔记过程中令人更加愉悦与轻松。同时，在白天使用浅色主题使笔记清晰明了，夜晚可以使用深色主题令人舒适。以下为几处灵感来源，对此表示感谢。
+- [pie](https://github.com/shrugginG/typora-theme-pie)主题
+- [ursine](https://github.com/danielduyixin/typora-theme-ursine)主题
+- `@张晋`对于pie主题与ursine的修改
 
-If you like this theme, please praise a star, thank you for your attention！
-## Feature
-- [x]  :baby_chick: Dark theme is available
-- [x]  :rocket: typora-theme-redrail have optimized font colors, page sizes, ordered lists and unordered lists
-- [x]  :sailboat: typora-theme-redrail-night has been adjusted for font color, background color, font size, reference block, line height, font spacing, code block font, interline code, and code block highlighting to make it more compatible and comfortable
-## Install theme
-1. Download `redrail.css`, `redrail-night.css` files， `redrail` and `redrail-night` folders in this theme，** The `redrail` and `redrail-night` folders is not necessary, it only contains the required fonts;**
-2. Open Typora, click "**Preferences** `(ctrl +,)`" => "**Appearance**" => "**Open Theme Folder**" button, the theme folder of Typora will pop up;
-3. Put the downloaded `redrail.css` , `redrail-night.css` files, `redrail`, `redrail-night` folders into the theme folder of Typora;
-4. Close and reopen Typora, select "**Theme**" => "**redrail**" or "**redrail-night**" from the menu bar.
+如果您喜欢这个主题，请给一个星星点赞，感谢您的关注！
+## 特性
+- [x]  :baby_chick: 支持暗黑主题
+- [x]  :rocket: 浅色主题具有优化的字体颜色，页宽，有序列表和无序列表
+- [x]  :sailboat: 暗黑主题对字体颜色，背景颜色，字体粗细，引用块，字体行高，字体间距，代码块字体，行间代码，代码块高亮样式进行了调整，更加协调和舒适
+## 安装主题
+1. 下载本主题中的`redrail.css`，`redrail-night.css`文件，以及 `redrail`和 `redrail-night` 文件夹，** `redrail`和 `redrail-night` 文件夹不是必须的，这里面仅仅包含了所需的字体**；
+2. 打开 Typora，点击“**偏好设置**（`ctrl + ,`）” => “**外观**” => “**打开主题文件夹**”按钮，会弹出 Typora 的主题文件夹；
+3. 将下载好的`redrail.css`，`redrail-night.css`文件，以及 `redrail`和 `redrail-night` 文件夹放到 Typora 的主题文件夹中；
+4. 关闭并重新打开 Typora，从菜单栏中选择 “**主题**” => “**redrail**”或“**redrail-night**” 即可。
 
-> For a better experience, make sure the computer has Consolas installed, with the font 'Source Han SerifCN'.
+>用户想获得更好的体验，请确保电脑已安装Consolas, 'Source Han SerifCN'字体。
 
-## Snapshots
+## 效果图
 
-![light-theme](README.assets/light-theme-2.png)
-![dark-theme](README.assets/dark-theme-1.png)
+![](https://raw.githubusercontent.com/Doraemonkeys/picture/master/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-08-07%20153842.png)
 
-## Update
+![](https://raw.githubusercontent.com/Doraemonkeys/picture/master/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-08-07%20155238.png)
 
-**Updated March 18, 2022**
 
-The dark theme:
 
-1. Adjust the dark mode of the text right-click properties.
+## 更新记录
 
-2. The mouseover color issue of the sidebar file.
+**2022年8月7日更新**
 
-3. The background color of the file name in the sidebar is not clear.
+1. 调整代码框主题样式
+2. 调整引用样式，与三级标题做区分
 
-4. Select the text background color adjustment for the text.
 
-**Updated June 9, 2021**
+----------------------fork-------------------------
 
-The light theme:
+**2022年3月18日更新**
 
-1. The English font is changed from Consolas to Menlo, which is more friendly to code and has a higher degree of differentiation than Consolas. The Chinese font is changed from Siyuan Song type to Microsoft Yahei, which can get a better experience on low-resolution screens.
+黑暗主题下：
 
-2. Set the font color in source code mode.
+1. 正文右键属性黑暗模式调整。
 
-3. Adjust the interline code color.
+2. 侧边栏文件鼠标悬停色问题。
 
-The dark theme:
+3. 侧边栏文件名背景色不清楚问题。
 
-1. Modify the English and Chinese fonts.
+4. 正文选择文本背景色调整。
 
-2. Modify the highlight color of some code boxes.
+**2021年6月9日更新**
 
-3. Modify the color of the action box below the sidebar.
+浅色主题下：
 
-**Updated April 2, 2021**
+1. 英文字体由Consolas改为Menlo，其对于代码更为友好，相比Consolas区分度更高，中文字体由思源宋体改为微软雅黑，在低分辨率的屏幕上可以获得更好的体验。
 
-1. Modified the left spacing of light and dark theme code blocks
+2. 设置源代码模式下的字体颜色。
 
-2. Adjust the dark theme table color.
+3. 调整行间代码颜色。
 
-3. Adjust the font color in the markdown box.
+黑暗主题下：
 
-4. Delete the redrail-night.user.css file and put the configuration in redrail-night.css.
+1. 修改英文及中文字体。
 
-5. Modify the formula color of light theme and dark theme.
+2. 修改部分代码框高亮颜色。
 
-**Created March 31, 2021**
+3. 修改侧边栏下方操作框颜色。
+
+**2021年4月2日 更新**
+
+1. 修改了浅色和暗色主题代码块左侧间距
+
+2. 调整暗色主题表格颜色。
+
+3. markdown框内调整字体颜色。
+
+4. 删除redrail-night.user.css文件，将其中配置放入redrail-night.css。
+
+5. 修改浅色主题和深色主题公式颜色。
+
+**2021年3月31日 创建**
