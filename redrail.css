@@ -1,4 +1,5 @@
 @import 'redrail/fonts.css';
+
 :root {
     --side-bar-bg-color: #fff;
     --control-text-color: #777;
@@ -53,14 +54,14 @@ body {
     color: black;
     -webkit-font-smoothing: antialiased;
     /*line-height: 1.8rem;*/
-    line-height: 17px
-    letter-spacing: 0;
+    line-height: 17px letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
 }
 
 /* 设置源代码模式的字体颜色 */
-.cm-s-typora-default .cm-code, .cm-s-typora-default .cm-comment {
+.cm-s-typora-default .cm-code,
+.cm-s-typora-default .cm-comment {
     color: #000000;
 }
 
@@ -73,13 +74,13 @@ body {
 #write p {
     /*行间距*/
     line-height: 1.8rem;
-     /*空格间距*/
+    /*空格间距*/
     word-spacing: .05rem;
     font-weight: regular;
     /* color: #3f3f3f; */
     color: var(--mid-13);
     margin: 0;
-     /*段间距*/
+    /*段间距*/
     padding: 0px 0;
 }
 
@@ -234,7 +235,7 @@ h2 {
 }
 
 h2::before {
-    content: '# '!important;
+    content: '# ' !important;
     color: #f22f27;
 }
 
@@ -372,7 +373,7 @@ h6 p {
 #write ol,
 #write ul {
     padding-left: 25px;
-    margin: .5rem 0;    
+    margin: .5rem 0;
 }
 
 #write ol>li,
@@ -396,6 +397,7 @@ h6 p {
 #write ul {
     list-style-type: disc;
 }
+
 /*引用*/
 blockquote {
     padding: 0.5rem 1rem;
@@ -477,7 +479,7 @@ table tr td:last-child {
 [md-inline='inline_math'] {
     color: #000000;
     font-size: 110%;
-    
+
 }
 
 
@@ -494,129 +496,157 @@ table tr td:last-child {
 
 /* 行号左框线 */
 
-#write .CodeMirror-gutters {
+/* #write .CodeMirror-gutters {
     border-right: 1px solid rgba(204, 51, 0);
+} */
+
+/* code */
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+    font-size: inherit;
 }
 
-
-/* 代码框 */
-
-#write .md-fences {
+code {
+    background-color: rgba(34, 37, 38, 0.05);
+    color: #e96900;
     font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #282c34;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 2px;
+    padding: 3px 4px 1px;
+    border-radius: 4px;
+}
+
+/* strike */
+del {
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* hightlight */
+mark {
+    color: #282c34;
+    font-weight: 500;
+    padding: 1px 5px 2px;
+    border-radius: 2px;
+}
+
+/* hyperlink */
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    border: none;
+}
+
+/* code fences */
+.md-fences {
+    font-family: "Fira Code", Consolas, "Lucida Console", "Courier", monospace, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #222526;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 10px;
     padding-right: 10px;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     margin-bottom: 2.5rem;
     border: none;
     border-radius: 6px;
 }
 
-#write .md-fences[contenteditable="false"]:active, .md-fences[contenteditable="false"]:focus {
+.md-fences[contenteditable="false"]:active,
+.md-fences[contenteditable="false"]:focus {
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-  
-#write .md-fences .code-tooltip {
-    background-color: #282c34;
+
+.md-fences .code-tooltip {
+    background-color: #222526;
     border-radius: 4px;
 }
 
-#write .md-fences span {
+.md-fences span {
     color: #abb2bf;
 }
 
-#write .md-fences .code-tooltip .ty-input {
+.md-fences .code-tooltip .ty-input {
     color: #fff;
     font-weight: 500;
 }
 
-#write [mdtype="math_block"] {
-    font-size: 1.2rem;
+.ty-show .autoComplt-list li.active {
+    background-color: #3e4249;
 }
 
-#write .CodeMirror-wrap .CodeMirror-code pre {
-    font-family: 'Menlo';
-    padding-left: 12px;
-    line-height: 1.55rem;
+/* code container */
+.cm-s-inner {
+    background-color: #222526;
 }
 
-/* 代码框左边的行数修改 */
-/*.cm-s-inner .CodeMirror-linenumber {
-    width: 2ch !important;
-    color: rgba(128, 128, 255, 0.8);
-}*/
-
-#write .CodeMirror-cursors .CodeMirror-cursor {
-    border-left: 2px solid var(--main-4);
+.cm-s-inner .CodeMirror-gutters {
+    background-color: #222526;
+    border: none;
 }
 
-
-/* 行间代码 */
-
-#write code,
-tt {
-    padding: 2px 4px;
-    border-radius: 2px;
-    font-family: 'Source Code Pro', Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑' !important;
-    font-size: 0.92rem;
-    font-weight: bold;
-    color: #ff0202;
-    background-color: #f8f5ec;
-    /* color: #c7254e;
-    background-color: #f9f2f4;  */
+.cm-s-inner .CodeMirror-guttermarker,
+.cm-s-inner .CodeMirror-guttermarker-subtle,
+.cm-s-inner .CodeMirror-linenumber {
+    color: #737984;
 }
 
-tt {
-    margin: 0 2px;
+.cm-s-inner .CodeMirror-cursor {
+    border-left: 1px solid #528bff !important;
 }
 
-#write .md-footnote {
-    background-color: #f8f8f8;
-    color: #e96900;
+.cm-s-inner div.CodeMirror-selected {
+    background: rgba(255, 255, 255, 0.15);
 }
 
-
-/* 流程图块 */
-
-#write .md-diagram-panel {
-    position: relative;
-    margin: 24px auto;
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-#write .md-focus .md-diagram-panel {
-    border: 1px solid var(--main-4);
-    border-radius: 4px;
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background-color: #bac6e9;
 }
 
-
-/* heighlight. */
-
-#write mark {
-    background-color: #EBFFEB;
-    border-radius: 2px;
-    padding: 2px 4px;
-    margin: 0 2px;
-    color: #222;
-    font-weight: 500;
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::selection {
+    background-color: #bac6e9;
 }
 
-#write del {
-    padding: 1px 2px;
+.cm-s-inner .CodeMirror-activeline-background {
+    background: rgba(0, 0, 0, 0);
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+    background-color: #404859 !important;
 }
 
 /* code fences color */
 .cm-s-inner .cm-keyword {
     color: #c678dd !important;
 }
-  
+
 .cm-s-inner .cm-operator {
     color: #56b6c2 !important;
 }
-  
+
 .cm-s-inner .cm-variable {
     color: #d19a66 !important;
 }
@@ -686,6 +716,60 @@ tt {
     color: #abb2bf !important;
 }
 
+/* 行间代码 */
+/*
+#write code,
+tt {
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: 'Source Code Pro', Roboto Mono, Source Sans Pro, 'Microsoft YaHei', '微软雅黑' !important;
+    font-size: 0.92rem;
+    font-weight: bold;
+    color: #ff0202;
+    background-color: #f8f5ec;
+    /* color: #c7254e;
+    background-color: #f9f2f4;  */
+/*}
+*/
+
+tt {
+    margin: 0 2px;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+
+/* 流程图块 */
+
+#write .md-diagram-panel {
+    position: relative;
+    margin: 24px auto;
+}
+
+#write .md-focus .md-diagram-panel {
+    border: 1px solid var(--main-4);
+    border-radius: 4px;
+}
+
+
+/* heighlight. */
+
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
 
 /* 任务列表小方框 */
 
@@ -693,7 +777,7 @@ tt {
     margin-left: -1.3em;
     margin-top: 0.3rem;
     -webkit-appearance: none;
-    
+
 }
 
 .md-task-list-item>input:before {
@@ -704,7 +788,7 @@ tt {
     vertical-align: middle;
     text-align: center;
     font-size: 0.8rem;
-    
+
     color: var(--mid-1);
     border-radius: 2px;
     border: 1px solid var(--main-4);
@@ -716,7 +800,7 @@ tt {
 .md-task-list-item>input[checked]:before {
     content: '\2714';
     font-size: 0.625rem;
-    
+
     color: var(--mid-1);
     border: 1px solid var(--main-6);
     background-color: var(--main-6);
@@ -884,26 +968,32 @@ footer {
     .typora-export * {
         -webkit-print-color-adjust: exact;
     }
+
     html {
-        font-size: 16px!important;
+        font-size: 16px !important;
     }
+
     body {
         /* font-family: 'Source Han SerifCN', Georgia, Times, 'SimSun', serif!important; */
         /* font-size: 16px!important; */
-        font-family: Times, 'SimSun', serif!important;
-        color: #000000!important;
+        font-family: Times, 'SimSun', serif !important;
+        color: #000000 !important;
     }
+
     p {
-        color: #000000!important;
+        color: #000000 !important;
     }
+
     a {
-        color: blue!important;
+        color: blue !important;
         /* border-bottom: 1px solid blue!important; */
     }
+
     table,
     pre {
         page-break-inside: avoid;
     }
+
     pre {
         word-wrap: break-word;
     }
