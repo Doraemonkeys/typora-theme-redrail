@@ -21,13 +21,15 @@
 
 >用户想获得更好的体验，请确保电脑已安装Consolas, 'Source Han SerifCN'字体。
 
+
+
 ## 效果图
 
-![image-20220810171046732](https://raw.githubusercontent.com/Doraemonkeys/picture/master/image-20220810171046732.png)
+![image-20220918151034543](https://raw.githubusercontent.com/Doraemonkeys/picture/master/image-20220918151034543.png)
 
 
 
-![image-20220810171149613](https://raw.githubusercontent.com/Doraemonkeys/picture/master/image-20220810171149613.png)
+![image-20220918151131770](https://raw.githubusercontent.com/Doraemonkeys/picture/master/image-20220918151131770.png)
 
 
 
@@ -35,10 +37,13 @@
 
 ## 更新记录
 
+**2022年9月18日更新**
+
+1. 添加三种不同宽度供选择
+
 **2022年8月10日更新**
 
 1. 调整代码框主题与代码样式
-
 
 **2022年8月7日更新**
 
